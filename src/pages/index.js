@@ -1,12 +1,14 @@
 import * as React from "react"
+import Layout from "../components/layout";
 
-const Homepage = () => {
+const IndexPage = () => {
   return (
-    <>
-      <h1>Hello!</h1>
-      <p>First line</p>
-    </>
-  );
+    <Layout pageHeading="Homepage">
+      <p>Home intro</p>
+    </Layout>
+  )
 };
 
-export default Homepage;
+export const Head = () => <title>Home Page</title>
+
+export default IndexPage;

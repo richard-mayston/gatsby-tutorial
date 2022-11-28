@@ -1,12 +1,14 @@
 import * as React from "react"
+import Layout from "../components/layout";
 
-const About = () => {
+const AboutPage = () => {
     return (
-        <>
-            <h1>About</h1>
-            <p>Intro</p>
-        </>
-    );
+        <Layout pageHeading="About Us">
+            <p>About us intro</p>
+        </Layout>
+    )
 };
 
-export default About;
+export const Head = () => <title>About</title>
+
+export default AboutPage;
