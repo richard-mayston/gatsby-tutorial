@@ -3,12 +3,13 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 
 const BlogPage = ({ data }) => {
+    console.log(data);
     return (
         <Layout pageHeading="Blog">
             <p>Blog intro</p>
             <ul>
                 {data.allFile.nodes.map(node => {
-                    return <li key={node.name}>{node.name}</li>
+                    return <li key={node.id}>{node.name}</li>
                 })}
             </ul>
         </Layout>
@@ -22,6 +23,7 @@ export const query = graphql`
         allFile(filter: {sourceInstanceName: {eq: "blog"}}) {
         nodes {
             name
+            id
         }
         }
     }
